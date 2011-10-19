@@ -5,8 +5,13 @@ import os
 import re
 import sys
 import tempfile
-import json
 import warnings
+
+#try to import json
+try:
+    import json
+except ImportError:
+    import simplejson as json
 
 from webob.acceptparse import (
     AcceptLanguage,
